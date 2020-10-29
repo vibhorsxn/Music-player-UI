@@ -1,0 +1,94 @@
+#latest {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #121e3d 0%, #000 100%);
+  display: flex;
+  padding-bottom: 15px;
+  flex-direction: column;
+}
+#latest h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+#latest .latest-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+#latest .latest-display .release-card {
+  height: 90px;
+  width: 350px;
+  background-color: rgb(18, 30, 65);
+  box-shadow: black 0px 0px 4px;
+  display: flex;
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+}
+#latest .latest-display .release-card img {
+  height: 100%;
+}
+#latest .latest-display .release-card .release-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 10px;
+}
+#latest .latest-display .release-card .release-text h4 {
+  color: white;
+}
+#latest .latest-display .release-card .release-text p {
+  font-size: 0.6rem;
+  font-family: "Source Sans Pro", sans-serif;
+  padding-top: 4px;
+  color: white;
+}
+#latest .latest-display .release-card .release-memu {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  flex-direction: column;
+  right: 10px;
+  align-items: flex-end;
+}
+#latest .latest-display .release-card .release-memu > div::-webkit-scrollbar {
+  display: none;
+}
+#latest .latest-display .release-card .release-memu > a {
+  color: rgb(6, 240, 240);
+}
+#latest .latest-display .release-card .release-memu > div {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  overflow: scroll;
+  z-index: 10;
+  height: 0px;
+}
+#latest .latest-display .release-card .release-memu > div > a {
+  text-decoration: none;
+  color: rgb(43, 10, 43);
+  padding: 10px;
+  font-family: "Source Sans Pro", sans-serif;
+  border-bottom: solid grey 1px;
+}
+#latest .latest-display .release-card .release-memu > div > a:last-of-type {
+  border: transparent;
+}
+#latest .latest-display .release-card .release-memu > a:hover + div {
+  height: 120px;
+  border-bottom: hotpink solid 2px;
+}
+#latest .latest-display .release-card .release-memu > div:hover {
+  border-bottom: hotpink solid 2px;
+  height: 120px;
+}
+@media only screen and (max-width: 780px) {
+  #latest .latest-display {
+    justify-content: center;
+  }
+}

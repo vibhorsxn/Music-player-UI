@@ -1,0 +1,132 @@
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgb(88, 88, 88) 0px 0px 10px;
+}
+nav .nav-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav .nav-left img {
+  height: 80%;
+  margin-left: 10px;
+  box-shadow: rgb(161, 177, 75) 0px 0px 5px;
+  border-radius: 50%;
+}
+nav .nav-left h6 {
+  margin-left: 50px;
+  color: white;
+  letter-spacing: 0.8px;
+  font-weight: normal;
+  font-size: 1rem;
+}
+nav .nav-left h6:hover {
+  color: #42af68;
+  cursor: pointer;
+}
+nav .nav-right {
+  height: 100%;
+  display: flex;
+  padding-right: 20px;
+  align-items: center;
+}
+nav .nav-right input {
+  outline: none;
+  border-radius: 20px;
+  padding: 10px 13px;
+  color: rgb(255, 255, 255);
+  font-size: 0.8rem;
+  background-color: #15883e;
+  box-shadow: rgb(88, 88, 88) 0px 0px 10px;
+}
+nav .nav-right input::placeholder {
+  font-size: large;
+  color: white;
+}
+nav .nav-right .notification {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+nav .nav-right .notification p {
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+nav .nav-right .notification #notifications {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  z-index: 15;
+  overflow: auto;
+  width: 250px;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+nav .nav-right .notification #notifications::-webkit-scrollbar {
+  display: none;
+}
+nav .nav-right .notification #notifications .default-message {
+  width: 90%;
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    rgba(30, 104, 33, 0.685),
+    rgba(128, 214, 157, 0.671)
+  );
+}
+nav .nav-right .notification #notifications .default-message p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+nav .nav-right .notification #notifications .default-message p:first-of-type {
+  font-size: 2rem;
+}
+nav .nav-right .notification p:hover + #notifications {
+  height: 50vh;
+  border-bottom: solid hotpink 3px;
+  box-shadow: black 0px 0px 10px;
+}
+nav .nav-right .notification #notifications:hover {
+  height: 50vh;
+  border-bottom: solid hotpink 2px;
+  box-shadow: black 0px 0px 10px;
+}
+nav .nav-right img {
+  height: 70%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 690px) {
+  nav .nav-left h4 {
+    display: none;
+  }
+}
+@media only screen and (max-width: 450px) {
+  nav .nav-right input {
+    width: 80px;
+  }
+  nav .nav-right p {
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+}

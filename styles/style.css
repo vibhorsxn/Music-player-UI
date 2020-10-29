@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-size: 20px;
+  user-select: none;
+  font-family: "Lato", sans-serif;
+  transition: all 0.2s ease-in-out;
+  text-rendering: optimizeSpeed;
+}
+
+body {
+  background: linear-gradient(rgb(23, 23, 41), rgb(38, 38, 66));
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.container > a {
+  display: none;
+}
+aside::-webkit-scrollbar {
+  display: none;
+}
+aside .aside-head > a {
+  display: none;
+}
+main {
+  width: 68%;
+  height: 100vh;
+  z-index: 8;
+  background-image: linear-gradient(to bottom, #121e3d 0%, #000 100%);
+  overflow: auto;
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 912px) {
+  #aside {
+    width: 0%;
+  }
+  aside .aside-head > a {
+    display: inline-block;
+    padding: 5px 8px;
+    background: white;
+    color: black;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    margin-right: 5px;
+  }
+  .container > a {
+    padding: 5px 10px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: white;
+    color: rgb(32, 30, 30);
+    display: inline-block;
+    font-size: 1.5rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    z-index: 8;
+  }
+  #aside:target {
+    width: 350px;
+  }
+  main {
+    width: 100%;
+  }
+}
+
+/* Popular Artist Section [SECTION 3] */
+#artists {
+  width: 100%;
+  background-image: linear-gradient(to bottom, #121e3d 0%, #000 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#artists > h1 {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+#artists .artists-display {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: auto;
+}
+#artists .artists-display .artist-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 150px;
+  padding: 10px;
+  background-color: rgb(14, 18, 53);
+}
+#artists .artists-display .artist-card a {
+  height: 80%;
+  width: 125px;
+}
+#artists .artists-display .artist-card img {
+  box-shadow: black 0px 0px 5px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#artists .artists-display .artist-card h4 {
+  color: white;
+  font-weight: normal;
+  padding-top: 4px;
+}
+
+/* Latest music section [SECTION 4+5] */
+#latest-lang {
+  width: 100%;
+  background-color: rgb(14, 18, 53);
+  display: flex;
+  flex-direction: column;
+}
+#latest-lang h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+  color: white;
+}
+#latest-lang .latest-display {
+  display: flex;
+  overflow: auto;
+  align-items: center;
+}
+#latest-lang .latest-display .latest-card {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 8px;
+}
+#latest-lang .latest-display .latest-card img {
+  border-radius: 5px;
+  height: 78%;
+}
+#latest-lang .latest-display .latest-card h4 {
+  font-size: 1rem;
+  color: white;
+}
+#latest-lang .latest-display .latest-card p {
+  font-size: 0.7rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: rgb(224, 222, 222);
+}

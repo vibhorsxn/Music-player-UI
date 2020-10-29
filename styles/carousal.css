@@ -1,0 +1,70 @@
+#slider {
+  position: relative;
+  width: 60%;
+  height: 240px;
+  margin: 0 auto;
+  margin-top: 100px;
+  font-family: "Helvetica Neue", sans-serif;
+  perspective: 800px;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+#slider input[type="radio"] {
+  display: none;
+}
+#slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  color: white;
+  font-size: 70px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+#slider label img {
+  width: 100%;
+  height: 100%;
+}
+#slider #slide1 {
+  background: tomato;
+}
+
+#slider #slide2 {
+  background: yellowgreen;
+}
+
+#slider #slide3 {
+  background: dodgerblue;
+}
+
+/* Slider Functions */
+
+/* Active Slide */
+#slider #s1:checked ~ #slide1,
+#slider #s2:checked ~ #slide2,
+#slider #s3:checked ~ #slide3 {
+  transform: translate3d(0%, 0, 0px);
+  box-shadow: rgb(20, 20, 20) 0px 0px 20px;
+}
+
+/* Next Slide */
+#slider #s1:checked ~ #slide2,
+#slider #s2:checked ~ #slide3,
+#slider #s3:checked ~ #slide1 {
+  transform: translate3d(40%, 0, -150px);
+}
+
+/* Previous Slide */
+#slider #s1:checked ~ #slide3,
+#slider #s2:checked ~ #slide1,
+#slider #s3:checked ~ #slide2 {
+  transform: translate3d(-40%, 0, -150px);
+}

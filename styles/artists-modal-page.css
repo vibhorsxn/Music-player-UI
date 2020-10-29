@@ -1,0 +1,198 @@
+/* // New Artist Modal Page */
+#artist-modal-page {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  box-sizing: border-box;
+  padding-top: 80px;
+  padding-bottom: 110px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+#artist-modal-page:target {
+  visibility: visible;
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+}
+#artist-modal-page a {
+  position: absolute;
+  top: 92px;
+  right: 12px;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+  padding: 8px 12px;
+  box-shadow: black 0px 0px 10px;
+  border: white solid 2px;
+  border-radius: 50%;
+  background-color: black;
+  z-index: 12;
+}
+#artist-modal-page .artist-wall {
+  display: flex;
+  width: 100%;
+  height: 300px;
+  position: relative;
+}
+#artist-modal-page .artist-wall::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(rgba(6, 6, 59, 0), rgba(6, 6, 59, 0.808));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#artist-modal-page .artist-wall img {
+  width: 25%;
+  height: 100%;
+}
+#artist-modal-page .artist-wall .artist-info {
+  display: flex;
+  z-index: 10;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px 15px;
+  color: white;
+  background-image: linear-gradient(to bottom, #121e3d 0%, #000 100%);
+}
+#artist-modal-page .artist-wall .artist-info h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+}
+#artist-modal-page .artist-wall .artist-info > p:nth-of-type(1) {
+  font-size: 0.9rem;
+  font-weight: lighter;
+  padding-top: 4px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding-bottom: 8px;
+}
+#artist-modal-page .artist-wall .artist-info .artist-buttons {
+  padding-top: 5px;
+  display: flex;
+}
+#artist-modal-page .artist-wall .artist-info .artist-buttons > p {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+#artist-modal-page .artist-wall .artist-info .artist-buttons > p:first-of-type {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-image: linear-gradient(
+    to right,
+    rgb(165, 19, 19),
+    rgb(187, 58, 49)
+  );
+  margin-right: 10px;
+}
+#artist-modal-page .artist-wall .artist-info .artist-buttons > p:last-of-type {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background-color: #15883e;
+}
+#artist-modal-page .artist-wall .artist-info .artist-buttons > p:active {
+  transform: scale(0.9);
+}
+#artist-modal-page .artist-wall .artist-info > p:last-of-type {
+  padding-top: 8px;
+  font-size: 0.8rem;
+}
+#artist-modal-page .artist-songs {
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#artist-modal-page .artist-songs::-webkit-scrollbar {
+  display: none;
+}
+#artist-modal-page .artist-songs .artist-track {
+  width: 98%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#artist-modal-page .artist-songs .artist-track:hover {
+  background-color: #121e3d;
+  cursor: pointer;
+}
+#artist-modal-page .artist-songs .artist-track .track-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+#artist-modal-page .artist-songs .artist-track .track-left > p {
+  padding: 10px;
+  color: white;
+}
+#artist-modal-page .artist-songs .artist-track .track-left > img {
+  height: 85%;
+  border-radius: 3px;
+  margin-right: 7px;
+}
+#artist-modal-page .artist-songs .artist-track .track-left .artist-track-info {
+  display: flex;
+  flex-direction: column;
+}
+#artist-modal-page
+  .artist-songs
+  .artist-track
+  .track-left
+  .artist-track-info
+  h4 {
+  color: white;
+  font-size: 1.1rem;
+}
+#artist-modal-page
+  .artist-songs
+  .artist-track
+  .track-left
+  .artist-track-info
+  p {
+  font-size: 0.65rem;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+#artist-modal-page .artist-songs .artist-track .track-right {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+#artist-modal-page .artist-songs .artist-track .track-right p {
+  color: white;
+  margin-right: 20px;
+}
+@media only screen and (max-width: 680px) {
+  #artist-modal-page .artist-wall img {
+    width: 0%;
+  }
+  #artist-modal-page .artist-wall .artist-info {
+    background: transparent;
+    position: relative;
+  }
+  #artist-modal-page .artist-wall .artist-info ::before {
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../images/geazy.jpg) no-repeat top;
+    background-size: 100% auto;
+    z-index: -1;
+    opacity: 0.1;
+  }
+  #artist-modal-page .artist-wall .artist-info p {
+    text-shadow: black 0px 0px 2px;
+  }
+}

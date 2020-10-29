@@ -1,0 +1,135 @@
+/*  Music Player design */
+footer {
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgb(56, 53, 53), rgb(65, 62, 62));
+  display: flex;
+  flex-wrap: wrap;
+  overflow: auto;
+  box-shadow: rgb(87, 84, 84) 0px 0px 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .play-info {
+  padding-left: 5%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .play-info img {
+  height: 80%;
+  border-radius: 5px;
+}
+footer .play-info .play-info-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+}
+footer .play-info .play-info-text h4 {
+  color: white;
+  font-size: 1.2rem;
+}
+footer .play-info .play-info-text p {
+  color: rgb(53, 184, 75);
+  font-size: 0.8rem;
+}
+footer .play-info > p {
+  color: white;
+  padding-left: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: rgba(0, 255, 255, 0.959);
+  transform: translateY(-7px);
+}
+footer .play-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .play-box .play-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65%;
+  margin-bottom: 4px;
+}
+footer .play-box .play-controls p {
+  color: white;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  padding-left: 20px;
+  cursor: pointer;
+  padding-right: 20px;
+  transition: all 0.05s ease-in-out;
+}
+footer .play-box .play-controls p:hover {
+  color: rgb(53, 184, 75);
+}
+footer .play-box .play-controls > p:nth-of-type(3) {
+  font-size: 2.5rem;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+footer .play-box .play-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35%;
+}
+footer .play-box .play-slider p {
+  color: white;
+  font-size: 0.8rem;
+}
+footer .play-box .play-slider .slider {
+  width: 30vw;
+  margin: 0px 20px;
+  outline: none;
+  background-color: white;
+  transition: opacity 0.2s;
+}
+footer .play-box .play-slider input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  cursor: pointer;
+  background-color: hotpink;
+}
+footer .play-right {
+  padding-right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .play-right p {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: white;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+footer .play-right input {
+  width: 100px;
+}
+@media only screen and (max-width: 1020px) {
+  footer .play-right {
+    display: none;
+  }
+  footer {
+    justify-content: space-evenly;
+  }
+}
+@media only screen and (max-width: 608px) {
+  footer .play-info {
+    display: none;
+  }
+  footer {
+    justify-content: center;
+  }
+  footer .play-box .play-slider .slider {
+    width: 60vw;
+  }
+}
